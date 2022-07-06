@@ -101,5 +101,3 @@ def upload_data():
         resp.status_code = 500
         return resp
  
-if __name__ == '__main__':
-    app.run(debug=True) 
