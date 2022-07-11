@@ -100,4 +100,6 @@ def upload_data():
         resp = jsonify(errors)
         resp.status_code = 500
         return resp
- 
+
+if __name__ == "__main__" :
+    app.run(debug = False , host = "0.0.0.0")
