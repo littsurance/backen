@@ -40,7 +40,7 @@ def fetchData (table):
 
 @app.route('/')
 def main():
-    return render_template('index.html');
+    return 'hello'
     
 @app.route('/login',methods =['POST'])
 def login():
