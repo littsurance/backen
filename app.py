@@ -15,6 +15,8 @@ UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024
   
+# $mysqli_connect("localhost","id19006995_root","Password@1234","id19006995_litsurance");
+
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
@@ -101,5 +103,5 @@ def upload_data():
         resp.status_code = 500
         return resp
 
-if __name__ == "__main__" :
-    app.run(debug = False , host = "0.0.0.0")
+# if __name__ == "__main__" :
+#     app.run(debug = False , host = "0.0.0.0")
