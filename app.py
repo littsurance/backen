@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session,json,jsonify
 import os
-import urllib.request
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
 from flask_mysqldb import MySQL
@@ -101,4 +100,4 @@ def upload_data():
         resp.status_code = 500
         return resp
 if __name__ == "__main__" :
-   app.run(debug = False , host = 0.0.0.0)
+   app.run(debug = False , host = "0.0.0.0")
