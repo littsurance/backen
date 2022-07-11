@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session,json,jsonify
 import os
+import urllib.request
 from werkzeug.utils import secure_filename
 from flask_cors import CORS
 from flask_mysqldb import MySQL
@@ -38,9 +39,12 @@ def fetchData (table):
     # return jsonify(account['count']) if account['count'] > 0  else  0
 
 
-@app.route('/')
+@app.route('/',methods = ["POST" , "GET" ])
 def main():
-    return 'hello'
+    if request.method == "POST" :
+        return jsonify({"response":"Post request recieved" })
+
+    return render_template('index.html');
     
 @app.route('/login',methods =['POST'])
 def login():
@@ -99,3 +103,4 @@ def upload_data():
         resp = jsonify(errors)
         resp.status_code = 500
         return resp
+ 
